@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>프런트엔드 개발자 지원서</title>
+    <style>
+        fieldset {
+            margin-bottom: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 25px;
+            color: blueviolet;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            line-height: 30px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .align-top {
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>상품 주문서</h1>
+    <div>
+        <form action="">
+            <fieldset>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="name"
+                            style="font-weight: bold; font-size: 18px; width: 80px; display: inline-block;">이름</label>
+                        <input type="text" id="name" placeholder="여백없이 입력">
+                    </li>
+                    <li>
+                        <label for="tel"
+                            style="font-weight: bold; font-size: 18px; width: 80px; display: inline-block;">연락처</label>
+                        <input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" placeholder="연락가능한 번호">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>배송지 정보</legend>
+                <ul>
+                    <li>
+                        <label for="address"
+                            style="font-weight: bold; font-size: 18px; width: 80px; display: inline-block;">주소</label>
+                        <input type="text" id="address" style="width: 60%;">
+                    </li>
+                    <li>
+                        <label for="tel2"
+                            style="font-weight: bold; font-size: 18px; width: 80px; display: inline-block;">전화번호</label>
+                        <input type="tel" id="tel2" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}">
+                    </li>
+                    <li>
+                        <label for="memo" class="align-top"
+                            style="font-weight: bold; font-size: 18px; width: 80px; display: inline-block;">메모</label>
+                        <textarea id="memo" name="memo" rows="3" style="width: 60%; margin-top: 10px;"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="coffee">과테말라 안티구아 (100g)
+                        </label>
+                        <input type="number" name="numCnt" step="1" value="0" style="display: inline-block; width:50px">
+                        개
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="coffee">인도네시아 만델링 (100g)
+                        </label>
+                        <input type="number" name="numCnt" step="1" value="0" style="display: inline-block; width:50px">
+                        개
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="coffee">탐라는도다(블렌딩) (100g)
+                        </label>
+                        <input type="number" name="numCnt" step="1" value="0" style="width:50px"> 개
+                    </li>
+                </ul>
+            </fieldset>
+            <div class="button-container">
+                <input type="submit" value="주문 하기">
+                <input type="reset" value="다시 작성">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
